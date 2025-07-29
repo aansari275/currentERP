@@ -1,0 +1,13 @@
+{
+  "name": "erp-manufacturing-dashboard",
+  "version": "1.0.0",
+  "description": "ERP Manufacturing Dashboard with Business Intelligence",
+  "main": "app.py",
+  "scripts": {
+    "start": "python app.py",
+    "dev": "python app.py"
+  },
+  "keywords": ["erp", "dashboard", "manufacturing", "business-intelligence"],
+  "author": "Your Name",
+  "license": "MIT"
+}
