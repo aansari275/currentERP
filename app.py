@@ -1,16 +1,24 @@
 from flask import Flask, render_template_string, jsonify
 import os
+import sys
 
 app = Flask(__name__)
 
 # For Vercel deployment, we'll use environment variables for sensitive data
-# You'll need to set these in Vercel dashboard
 DB_CONFIG = {
     'server': os.environ.get('DB_SERVER', '167.71.239.104'),
     'user': os.environ.get('DB_USER', 'sa'),
     'password': os.environ.get('DB_PASSWORD', 'Empl@786'),
     'database': os.environ.get('DB_NAME', 'empl_data19')
 }
+
+# Add error handling for missing dependencies
+try:
+    import pymssql
+    DB_AVAILABLE = True
+except ImportError:
+    DB_AVAILABLE = False
+    print("Warning: pymssql not available, using mock data")
 
 def get_mock_data():
     """Return mock data for demonstration"""
