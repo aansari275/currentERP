@@ -1,5 +1,5 @@
 {
-  "name": "erp-manufacturing-dashboard",
+  "name": "current-erp",
   "version": "1.0.0",
   "description": "ERP Manufacturing Dashboard with Business Intelligence",
   "main": "app.py",
